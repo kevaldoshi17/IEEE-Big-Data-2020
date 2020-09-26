@@ -38,7 +38,7 @@ NOTE: It is expected that the Dataset be structured in PASCAL VOC format (images
 run ./darknet detector train obj.data (choose yolov_416/608.cfg) /backup/yolov4_1000.weights
 ```
 
-The ensemble model consists of a base model and 4 semi-base models. 
+The ensemble model consists of a base model and 4 semi-base models. Instead of augmenting the test set which increases the prediction time, we save similar base models trained for different number of iterations and use different file sizes in cfg to artificially augment the test data and use a multi-gpu setup to quickly run it for multiple models.  
 
 Base Model: Yolo - Aug - 416x416 it: 14000 test: 416x416
 
