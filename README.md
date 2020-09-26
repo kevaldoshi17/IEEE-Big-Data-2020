@@ -5,8 +5,7 @@ The best ensemble model achieved mean F1-score of 0.628 (**Ranked 3rd**) on Test
 
 - [Quick start](#quick-start)
 - [RDCC Dataset Setup](#RDCC-Dataset-Setup)
-- [Detection / Submission](#Detection)
-- [Training](#Training)
+- [Submission](#Submission)
 
 ## Quick-start
 1. Clone the road-damage-detection repo into $RDD: 
@@ -31,7 +30,7 @@ The best ensemble model achieved mean F1-score of 0.628 (**Ranked 3rd**) on Test
 
 NOTE: It is expected that the Dataset be structured in PASCAL VOC format (images under JPEGImages, XML files under Annotations directory)
 
-## Detection
+## Submission
 
 ### Training 
 
