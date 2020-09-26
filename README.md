@@ -52,7 +52,7 @@ S. Model 4. Yolo - No Aug - 416x416 it: [15000-18000] test: 416x416
 
 Save each S. Model at intervals of 1000 between the limits shown above. Save all of the models in the folder [model](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/tree/master/models).
 
-All the pretrained models can be downloaded from here:https://drive.google.com/file/d/13wgjGXkYm_55ixO_cH7fbOrBjJZ1X8-O/view?usp=sharing
+All the pretrained models can be downloaded from [here](https://drive.google.com/file/d/13wgjGXkYm_55ixO_cH7fbOrBjJZ1X8-O/view?usp=sharing).
 
 
 ### Inference
