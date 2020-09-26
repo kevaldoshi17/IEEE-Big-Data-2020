@@ -33,16 +33,20 @@ NOTE: It is expected that the Dataset be structured in PASCAL VOC format (images
 
 ## Detection
 
-    ```Shell
-    ./darknet detector train cfg/coco.data cfg/yolov4.cfg /backup/yolov4_1000.weights
-    ```
+```Shell
+run ./darknet detector train cfg/coco.data cfg/yolov4.cfg /backup/yolov4_1000.weights
+```
 
 The ensemble model consists of a base model and 4 semi-base models. 
 
 Base Model: Yolo - Aug - 416x416 it: 14000 test: 416x416
+
 S. Model 1: Yolo - Aug - 416x416 it: [13000-20000] test: 416x416
+
 S. Model 2. Yolo - Aug - 608x608 it: [14000-20000] test: 608x608
+
 S. Model 3. Yolo - Aug - 608x608 it: [15000-20000] test: 416x416
+
 S. Model 4. Yolo - No Aug - 416x416 it: [15000-18000] test: 416x416
 
 Save each S. Model at intervals of 1000 between the limits shown above. Save all of the models in the folder [model](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/tree/master/models).
