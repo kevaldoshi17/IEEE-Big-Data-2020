@@ -66,5 +66,5 @@ The extracted bounding boxes from each model have been submitted with the source
 ./darknet detector test obj.data yolo_608.cfg (insert model here) -thresh 0.05 -dont_show  < test.txt -out ensemble/model_name.json
 ```
 
-Once all the bounding boxes from each model is extracted (should be 33 in total), run [submission.ipynb](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/blob/master/Submission.ipynb). That should output the submitted results.
+Once all the bounding boxes (saved as json files) from each model is extracted (should be 33 in total per test dataset), run [submission.ipynb](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/blob/master/Submission.ipynb). That should output the submitted results.
 
