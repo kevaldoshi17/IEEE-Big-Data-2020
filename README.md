@@ -33,8 +33,10 @@ NOTE: It is expected that the Dataset be structured in PASCAL VOC format (images
 
 ## Detection
 
+### Training 
+
 ```Shell
-run ./darknet detector train cfg/coco.data cfg/yolov4.cfg /backup/yolov4_1000.weights
+run ./darknet detector train obj.data (choose yolov_416/608.cfg) /backup/yolov4_1000.weights
 ```
 
 The ensemble model consists of a base model and 4 semi-base models. 
@@ -51,5 +53,18 @@ S. Model 4. Yolo - No Aug - 416x416 it: [15000-18000] test: 416x416
 
 Save each S. Model at intervals of 1000 between the limits shown above. Save all of the models in the folder [model](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/tree/master/models).
 
+All the pretrained models can be downloaded from here:https://drive.google.com/file/d/13wgjGXkYm_55ixO_cH7fbOrBjJZ1X8-O/view?usp=sharing
 
-The models can be downloaded from here:https://drive.google.com/file/d/13wgjGXkYm_55ixO_cH7fbOrBjJZ1X8-O/view?usp=sharing
+
+### Inference
+
+For each model, run the following script to detect the bounding boxes and save them in [ensemble1](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/tree/master/ensemble1) or [ensemble2](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/tree/master/ensemble2) depending on the test dataset. 
+
+The extracted bounding boxes from each model have been submitted with the source code.
+
+```Shell
+./darknet detector test obj.data yolo_608.cfg (insert model here) -thresh 0.05 -dont_show  < test.txt -out ensemble/model_name.json
+```
+
+Once all the bounding boxes from each model is extracted (should be 33 in total), run [submission.ipynb](https://github.com/kevaldoshi17/IEEE-Big-Data-2020/blob/master/Submission.ipynb). That should output the submitted results.
+
